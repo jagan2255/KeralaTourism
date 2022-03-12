@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Districts</title>
+    <link rel="icon" type="image/png" sizes="256x256" href="Images/favocon.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+  
+ <style>
+ #headerfont{
+   font-family: "Nanum Gothic Coding', monospace;";
+ }
+
+ .cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+ .card {
+  margin: 30px auto;
+  margin-left: 2px;
+  width: 250px;
+  height: 250px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  }
+
+  .card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  }
+
+  .card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+  }
+
+  .card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+  }
+
+  .card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+  -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+
+  .title-white {
+  color: white;
+  }  
+
+
+  @media all and (max-width: 200px) {
+  .card-list {
+  /* On small screens, we are no longer using row direction but column */
+  flex-direction: column;
+  }
+  }  
+  </style>
+
+
+</head>
+<body>
+
+  <!-- Navbar Begins -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#ffffff;">
+    <div class="container-fluid">
+        <img src="Images/Logo2.png" alt="" width="80" height="47" class="d-inline-block align-text-center">
+      <a class="navbar-brand" id="headerfont" href="index.html">Kerala Tourism</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#topdestinations">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="districts.html">Districts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contactus">Contact Us</a>
+          </li>
+        </ul>
+        <a href="signup.html" class="btn fw-bold btn-outline-dark me-2">Signup</a>
+        <a href="login.html" class="btn fw-bold btn-outline-dark me-2">Login</a>
+      </div>
+    </div>
+  </nav>
+ <!-- Navbar Ending -->
+<div>
+  <img style="width: 100%; height: 420px;" class="district-image" src="Images/district-2.jpg" alt="Waterfall">
+</div>
+
+<div>
+  <h1 style="text-align: center; border: 2px solid rgba(255, 127, 80, 0.116); background-color: rgba(255, 127, 80, 0.116);">Districts</h1>
+  <div class="cards-list">
+
+    <a href="trivandrum.html" style="text-decoration: none;">
+    <div class="card 1">
+      <div class="card_image">
+        <img src="Images/trivandrum.jpg" />
+      </div>
+      <div class="card_title title-white">
+        <p>Trivandrum</p>
+      </div>
+    </div>
+  </a>
+  <a href="kollam.html" style="text-decoration: none;">
+      <div class="card 2">
+      <div class="card_image"> <img src="Images/kollam.jpg" /> </div>
+      <div class="card_title title-white">
+        <p>Kollam</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="idukki.html" style="text-decoration: none;">
+    <div class="card 3">
+      <div class="card_image"> <img src="Images/idukki.jpg" /> </div>
+      <div class="card_title title-white">
+        <p>Idukki</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="wayanad.html" style="text-decoration: none;">
+    <div class="card 4">
+     <div class="card_image"> <img src="Images/Wayanad.jpg" /> </div>
+         <div class="card_title title-white">
+         <p>Wayanad</p>
+       </div>
+      </div>
+    </a> 
+
+   <a href="alappuzha.html" style="text-decoration: none;">
+      <div class="card 5">
+        <div class="card_image"> <img src="Images/alleppeyPlaces22.jpg" /> </div>
+          <div class="card_title title-white">
+           <p>Alappuzha</p>
+         </div>
+        </div>
+      </div>
+    </a>
+</div>
+<br>
+    <div class="sticky-bottom bg-dark" style= "position: absolute; width: 100%;">
+      <p style="color: #ffffff; text-align: center;margin-top: 8px;">Copyright@2022</p>
+    </div>
+
+
+ <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
+</body>
+</html>
