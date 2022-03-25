@@ -54,17 +54,17 @@
    <div class="container">
        <div class="row d-flex justify-content-center">
            <div class="col-10  col-md-7 col-sm-9 col-lg-4">
-            <form style="width: 370px;" class="form-container-login">
+            <form style="width: 370px;" class="form-container-login" onkeypress="return revalidate()" onsubmit="return validate()">
                 <h4 style="text-align: center; text-decoration: white;">Login</h4>
                 <br>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="email1" aria-describedby="emailHelp">
                 </div>
 
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
+                  <input type="password" class="form-control" id="password1" aria-describedby="passwordHelp">
                 </div>
 
 
@@ -88,6 +88,7 @@
     <!-- Login Form Ending -->
 
  <!-- JavaScript Bundle with Popper -->
+<script src="login.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  
 </body>
