@@ -100,30 +100,22 @@ function validate() {
 
               //Password Strength Indicator
 
-      let weakreg = /^[A-Za-z]+$/;  
-      let mediumreg =/^[a-zA-Z0-9!@#$%^&*]{4,6}$/    
-      
-      function passdstrength(){
-          if(weakreg.test(pssd.value)){
-            msg6.innerHTML = "Password Strength: Weak";
-            msg6.style.color = "red";
-            return;
-          }
-
-          else if(mediumreg.test(pssd.value)){
-            msg6.innerHTML = "Password Strength: Medium";
-            msg6.style.color = "orange";
-            return;
-
-          }
-          else if(regexpp.test(pssd.value)){
-            msg6.innerHTML = "Password Strength: Strong 🔥";
-            msg6.style.color = "Green";
-            return;
-          }
-
-
-          }
+      function passdstrength() {
+        var msg6 = document.getElementById('msg6');
+        var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+        var mediumRegex = new RegExp("^(?=.{6,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+        var enoughRegex = new RegExp("(?=.{1,}).*", "g");
+       
+        if (false == enoughRegex.test(pssd.value)) {
+            msg6.innerHTML = '<span style="color:red">Invalid Password</span>';
+        } else if (strongRegex.test(pssd.value)) {
+            msg6.innerHTML = '<span style="color:green">Password Strength: Strong 🔥 </span>';
+        } else if (mediumRegex.test(pssd.value)) {
+            msg6.innerHTML = '<span style="color:orange">Password Strength: Medium</span>';
+        } else {
+            msg6.innerHTML = '<span style="color:red">Password Strength: Weak</span>';
+        }
+       }
 
             // Function to remove Error Message
 
